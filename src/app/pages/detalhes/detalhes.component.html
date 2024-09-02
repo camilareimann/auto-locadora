@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="card">
+    <h1>Detalhes do Automóvel</h1>
+    <img [src]="automovel.image" alt="{{ automovel.name }}" />
+    <div class="detail">
+      <label>Nome:</label>
+      <span>{{ automovel.name }}</span>
+    </div>
+    <div class="detail">
+      <label>Ano:</label>
+      <span>{{ automovel.year }}</span>
+    </div>
+    <div class="detail">
+      <label>Tipo:</label>
+      <span>{{ automovel.type }}</span>
+    </div>
+    <div class="detail">
+      <label>Preço por dia:</label>
+      <span>R$ {{ automovel.pricePerDay }}</span>
+    </div>
+    <div class="detail">
+      <label>Descrição:</label>
+      <span>{{ automovel.description }}</span>
+    </div>
+    <div>
+      <button class="btn" (click)="favoritar()">
+        {{ automovel.favorito ? 'Remover dos Favoritos' : 'Adicionar aos Favoritos' }}
+      </button>
+    </div>
+  </div>
+</div>

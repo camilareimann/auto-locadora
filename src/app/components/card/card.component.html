@@ -1,0 +1,11 @@
+<div class="card">
+  <img [src]="automovel.image" alt="{{ automovel.name }}" class="card-image"/>
+  <div class="card-info">
+    <h3>{{ automovel.name }}</h3>
+    <p>Ano: {{ automovel.year }}</p>
+    <p>Preço: R$ {{ automovel.pricePerDay }}</p>
+    <button class="btn-favoritar" (click)="onFavoritar()"> 
+      {{ automovel.favorito ? '❤️' : '🤍' }}
+    </button>
+  </div>
+</div>

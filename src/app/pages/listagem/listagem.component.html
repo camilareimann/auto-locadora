@@ -1,0 +1,12 @@
+<app-cabecalho></app-cabecalho>
+<div class="lista-automoveis">
+  <app-pesquisa (search)="filtrarAutomoveis($event)"></app-pesquisa>
+  <div class="cards-container">
+    <app-card 
+    *ngFor="let automovel of filteredAutomoveis" 
+    [automovel]="automovel" 
+    (favoritar)="favoritar(automovel)">
+  </app-card>
+  </div>
+</div>
+<app-rodape></app-rodape>
